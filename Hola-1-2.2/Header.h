@@ -2,7 +2,7 @@
 #include <iostream>
 #include <conio.h>
 #include <windows.h>
-#define ANCHO  110
+#define ANCHO  120
 #define ALTO  60
 
 using namespace std;
