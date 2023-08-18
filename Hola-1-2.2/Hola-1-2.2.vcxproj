@@ -112,6 +112,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="C:\Users\flore\Downloads\Header1.h" />
     <ClInclude Include="Header.h" />
   </ItemGroup>
   <ItemGroup>

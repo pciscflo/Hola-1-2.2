@@ -1,8 +1,9 @@
 #pragma once
+#pragma once
 #include <iostream>
 #include <conio.h>
 #include <windows.h>
-#define ANCHO  120
+#define ANCHO  110
 #define ALTO  60
 
 using namespace std;
@@ -26,16 +27,26 @@ private:
     int ancho, alto;
 
 public:
-    Raton(int x, int y, int dx, int dy, int ancho, int alto)
-        : x(x), y(y), dx(dx), dy(dy),  ancho(ancho), alto(alto){}
+    Raton(int initialX, int initialY, int initialdx, int initialdy, int initialancho, int initialalto)
+        : x(initialX), y(initialY), dx(initialdx), dy(initialdy),  ancho(initialancho), alto(initialalto){}
 
     void draw() {
+        if (dx > 0) {
             gotoxy(x, y);
             cout << "        ____()()";
             gotoxy(x, y + 1);
             cout << "      /      @@";
             gotoxy(x, y + 2);
-            cout << "`~~~~~\_;m__m._>o";       
+            cout << "`~~~~~\_;m__m._>o";
+        }
+        else {
+            gotoxy(x, y);
+            cout << "  ()()____";
+            gotoxy(x, y + 1);
+            cout << "  @@      \\";
+            gotoxy(x, y + 2);
+            cout << "o<_.m__m;_/~~~~~`";
+        }
     }
 
     void mover() {
@@ -54,4 +65,5 @@ public:
         return y;
     }
  };
+
 

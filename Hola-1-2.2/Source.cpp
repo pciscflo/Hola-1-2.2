@@ -12,7 +12,7 @@ int main() {
 		system("cls");
 		a->mover();
 		a->draw();
-		Sleep(800);
+		Sleep(150);
 	}
 
 }
