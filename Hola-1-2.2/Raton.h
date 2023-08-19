@@ -27,15 +27,15 @@ private:
 
 public:
     Raton(int x, int y, int dx, int dy, int ancho, int alto)
-        : x(x), y(y), dx(dx), dy(dy),  ancho(ancho), alto(alto){}
+        : x(x), y(y), dx(dx), dy(dy), ancho(ancho), alto(alto) {}
 
     void draw() {
-            gotoxy(x, y);
-            cout << "        ____()()";
-            gotoxy(x, y + 1);
-            cout << "      /      @@";
-            gotoxy(x, y + 2);
-            cout << "`~~~~~\_;m__m._>o";       
+        gotoxy(x, y);
+        cout << "        ____()()";
+        gotoxy(x, y + 1);
+        cout << "      /      @@";
+        gotoxy(x, y + 2);
+        cout << "`~~~~~\_;m__m._>o";
     }
 
     void mover() {
@@ -46,6 +46,14 @@ public:
         x += dx;
         y += dy;
     }
+    void clear() {
+        for (int i = 0; i < alto; i++) {
+            for (int j = 0; j < ancho; j++) {
+                gotoxy(x + j, y + i);
+                cout << " ";
+            }
+        }
+    }
 
     int getX() {
         return x;
@@ -53,5 +61,6 @@ public:
     int getY() {
         return y;
     }
- };
+};
+
 
