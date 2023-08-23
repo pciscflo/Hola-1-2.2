@@ -51,7 +51,7 @@ public:
     void mover() {
         if (!(x + dx > 0 && (x + ancho + dx) < ANCHO))
             dx *= -1;
-        if (!(y + dy > 0 && y + alto + dy > ALTO))
+        if (!(y + dy > 0 && y + alto + dy < ALTO))
             dy *= -1;
         x += dx;
         y += dy;

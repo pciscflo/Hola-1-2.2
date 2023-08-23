@@ -1,7 +1,7 @@
 #include <iostream>
 #include <conio.h>
 #include <windows.h>
-#include "Raton1.h"
+#include "Raton.h"
 using namespace std;
 
 int main() {

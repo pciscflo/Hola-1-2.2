@@ -3,7 +3,7 @@
 #include <conio.h>
 #include <windows.h>
 #define ANCHO  120
-#define ALTO  60
+#define ALTO  30
 
 using namespace std;
 using namespace System;
@@ -15,6 +15,7 @@ void gotoxy(int x, int y) {
     coord.X = x;
     coord.Y = y;
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
+    //Console::SetCursorPosition(x, y);
 }
 
 class Raton {
@@ -41,7 +42,7 @@ public:
     void mover() {
         if (!(x + dx > 0 && (x + ancho + dx) < ANCHO))
             dx *= -1;
-        if (!(y + dy > 0 && y + alto + dy > ALTO))
+        if (!(y + dy > 0 && y + alto + dy < ALTO))
             dy *= -1;
         x += dx;
         y += dy;
